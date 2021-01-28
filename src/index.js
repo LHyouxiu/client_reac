@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'antd';
+import { HashRouter, Switch, Route } from "react-router-dom";
+import Layout from './containers/layout/layout'
+import './assets/css/layout.css'
 
 ReactDOM.render(
-  <div className="App">
-    <Button type="primary">Primary</Button>
-    <Button>Default</Button>
-  </div>,
+  <HashRouter>
+    <Switch>
+      {/* <Route path="/layout" component={Layout}/> */}
+      <Route component={Layout}/>
+    </Switch>
+  </HashRouter>,
   document.getElementById('root')
 );
 
